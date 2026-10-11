@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online UUID generator. Create random UUID v4 identifiers instantly, one or many at a time.">
+  <title>UUID Generator - Developer Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>UUID Generator</h1>
+    <p class="tool-intro">Generate random UUID v4 identifiers. Choose how many you need, then copy them.</p>
+
+    <div class="panel">
+
+      <div class="control">
+        <label for="count">How many UUIDs? (1 to 100)</label>
+        <input type="number" id="count" min="1" max="100" value="1">
+      </div>
+
+      <div class="options">
+        <label class="option"><input type="checkbox" id="opt-upper"> Uppercase</label>
+        <label class="option"><input type="checkbox" id="opt-no-hyphens"> Remove hyphens</label>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn" id="btn-generate">Generate</button>
+        <button class="btn btn-secondary" id="btn-copy">Copy</button>
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <textarea id="uuid-output" class="short" readonly spellcheck="false" aria-label="Generated UUIDs"></textarea>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="uuid-generator.js"></script>
+
+</body>
+</html>

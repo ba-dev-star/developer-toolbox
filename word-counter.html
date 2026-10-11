@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online word and character counter. Count words, characters, lines and paragraphs as you type.">
+  <title>Word and Character Counter - Developer Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Word and Character Counter</h1>
+    <p class="tool-intro">Type or paste your text. The numbers update instantly as you write.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-value" id="stat-words">0</div><div class="stat-label">Words</div></div>
+      <div class="stat"><div class="stat-value" id="stat-chars">0</div><div class="stat-label">Characters</div></div>
+      <div class="stat"><div class="stat-value" id="stat-chars-no-spaces">0</div><div class="stat-label">Without spaces</div></div>
+      <div class="stat"><div class="stat-value" id="stat-lines">0</div><div class="stat-label">Lines</div></div>
+      <div class="stat"><div class="stat-value" id="stat-paragraphs">0</div><div class="stat-label">Paragraphs</div></div>
+      <div class="stat"><div class="stat-value" id="stat-reading">0 min</div><div class="stat-label">Reading time</div></div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="field">
+      <label for="text-input">Your text</label>
+      <textarea id="text-input" placeholder="Start typing or paste your text here..."></textarea>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="word-counter.js"></script>
+
+</body>
+</html>

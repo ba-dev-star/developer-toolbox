@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online color converter. Convert HEX to RGB and RGB to HEX instantly with a live color preview.">
+  <title>Color Converter - Developer Toolbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Color Converter</h1>
+    <p class="tool-intro">Convert colors between HEX and RGB. Type in either one, or pick a color.</p>
+
+    <div class="panel">
+
+      <div class="color-layout">
+
+        <div>
+          <div class="swatch" id="swatch"></div>
+          <input type="color" id="picker" value="#4f46e5" aria-label="Pick a color">
+        </div>
+
+        <div>
+          <div class="control">
+            <label for="hex">HEX</label>
+            <input type="text" id="hex" class="text-input" value="#4F46E5" maxlength="7" spellcheck="false">
+          </div>
+
+          <div class="control">
+            <label>RGB</label>
+            <div class="rgb-row">
+              <div>
+                <label class="mini" for="r">R (red)</label>
+                <input type="number" id="r" min="0" max="255" value="79">
+              </div>
+              <div>
+                <label class="mini" for="g">G (green)</label>
+                <input type="number" id="g" min="0" max="255" value="70">
+              </div>
+              <div>
+                <label class="mini" for="b">B (blue)</label>
+                <input type="number" id="b" min="0" max="255" value="229">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <div class="toolbar">
+        <button class="btn" id="btn-copy-hex">Copy HEX</button>
+        <button class="btn btn-secondary" id="btn-copy-rgb">Copy RGB</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="color-converter.js"></script>
+
+</body>
+</html>
