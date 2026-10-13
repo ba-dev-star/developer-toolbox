@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online URL encoder and decoder. Percent-encode and decode URLs, query strings and text instantly in your browser.">
+  <title>URL Encoder and Decoder - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>URL Encoder and Decoder</h1>
+    <p class="tool-intro">Encode text so it is safe inside a URL, or decode percent-encoded text like <code>%20</code> back to normal. Works with any language, including Arabic.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-encode">Encode</button>
+      <button class="btn" id="btn-decode">Decode</button>
+      <button class="btn btn-secondary" id="btn-swap">Swap</button>
+      <button class="btn btn-secondary" id="btn-copy">Copy result</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="toolbar">
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="component">Component: for values and parameters</option>
+        <option value="full">Full URL: keeps : / ? &amp; = unchanged</option>
+      </select>
+      <label class="option"><input type="checkbox" id="plus-space"> Treat + as space when decoding</label>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="tool-grid">
+      <div class="field">
+        <label for="url-input">Input</label>
+        <textarea id="url-input" dir="auto" placeholder="Type or paste text or a URL here" spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        <label for="url-output">Result</label>
+        <textarea id="url-output" dir="auto" readonly spellcheck="false"></textarea>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="url-encoder.js"></script>
+
+</body>
+</html>

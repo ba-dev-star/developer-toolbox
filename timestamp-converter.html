@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Unix timestamp converter. Convert epoch time to a readable date and a date to a Unix timestamp, in seconds or milliseconds.">
+  <title>Unix Timestamp Converter - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Unix Timestamp Converter</h1>
+    <p class="tool-intro">Convert Unix timestamps (epoch time) to readable dates and back. Seconds and milliseconds are detected automatically.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-value" id="now-seconds">0</div><div class="stat-label">Current time (seconds)</div></div>
+      <div class="stat"><div class="stat-value" id="now-ms">0</div><div class="stat-label">Current time (milliseconds)</div></div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn btn-secondary btn-small" data-copy="now-seconds">Copy seconds</button>
+      <button class="btn btn-secondary btn-small" data-copy="now-ms">Copy milliseconds</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="panel wide">
+      <h2>Timestamp to date</h2>
+      <div class="toolbar">
+        <input type="text" id="ts-input" class="text-input" placeholder="1760000000" aria-label="Unix timestamp" spellcheck="false">
+        <select id="ts-unit" aria-label="Unit">
+          <option value="auto">Auto-detect</option>
+          <option value="seconds">Seconds</option>
+          <option value="milliseconds">Milliseconds</option>
+        </select>
+        <button class="btn" id="btn-ts-convert">Convert</button>
+        <button class="btn btn-secondary" id="btn-ts-now">Use now</button>
+      </div>
+
+      <div class="result-list">
+        <div class="result-row"><div class="result-label">Detected unit</div><div class="result-value" id="ts-detected"></div></div>
+        <div class="result-row"><div class="result-label">ISO 8601 (UTC)</div><div class="result-value" id="ts-iso"></div><button class="btn btn-secondary btn-small" data-copy="ts-iso">Copy</button></div>
+        <div class="result-row"><div class="result-label">UTC</div><div class="result-value" id="ts-utc"></div><button class="btn btn-secondary btn-small" data-copy="ts-utc">Copy</button></div>
+        <div class="result-row"><div class="result-label">Your local time</div><div class="result-value" id="ts-local"></div><button class="btn btn-secondary btn-small" data-copy="ts-local">Copy</button></div>
+        <div class="result-row"><div class="result-label">Relative</div><div class="result-value" id="ts-relative"></div></div>
+      </div>
+    </div>
+
+    <div class="panel wide">
+      <h2>Date to timestamp</h2>
+      <div class="toolbar">
+        <input type="text" id="dt-input" class="text-input" placeholder="2026-10-13 14:30:00" aria-label="Date and time" spellcheck="false">
+        <select id="dt-zone" aria-label="Time zone">
+          <option value="local">My local time</option>
+          <option value="utc">UTC</option>
+        </select>
+        <button class="btn" id="btn-dt-convert">Convert</button>
+        <button class="btn btn-secondary" id="btn-dt-now">Use now</button>
+      </div>
+
+      <div class="result-list">
+        <div class="result-row"><div class="result-label">Seconds</div><div class="result-value" id="dt-seconds"></div><button class="btn btn-secondary btn-small" data-copy="dt-seconds">Copy</button></div>
+        <div class="result-row"><div class="result-label">Milliseconds</div><div class="result-value" id="dt-ms"></div><button class="btn btn-secondary btn-small" data-copy="dt-ms">Copy</button></div>
+        <div class="result-row"><div class="result-label">ISO 8601 (UTC)</div><div class="result-value" id="dt-iso"></div><button class="btn btn-secondary btn-small" data-copy="dt-iso">Copy</button></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="timestamp-converter.js"></script>
+
+</body>
+</html>

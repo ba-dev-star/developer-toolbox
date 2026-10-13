@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free online tools for developers: JSON formatter, password generator, color converter, Base64, word counter and UUID generator.">
+  <meta name="description" content="Free online tools for developers: JSON formatter, JWT decoder, URL encoder, timestamp converter, Base64, password and UUID generators and more.">
   <title>Developer Toolbox - Free Tools for Developers</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -36,7 +36,7 @@
 
         <div class="tools-toolbar">
           <input type="search" id="tool-search" class="search-input" placeholder="Search tools... (press / to focus)" aria-label="Search tools" autocomplete="off">
-          <span class="tool-count" id="tool-count">6 tools</span>
+          <span class="tool-count" id="tool-count">9 tools</span>
         </div>
 
         <div class="chips" role="group" aria-label="Filter by category">
@@ -53,6 +53,24 @@
             <span class="card-icon">{ }</span>
             <h3>JSON Formatter and Validator</h3>
             <p>Format, beautify and check your JSON for errors.</p>
+          </a>
+
+          <a class="card" href="jwt-decoder.html" data-category="security" data-keywords="jwt json web token decode bearer auth claims expiry">
+            <span class="card-icon">JWT</span>
+            <h3>JWT Decoder</h3>
+            <p>Read a token's header, payload and expiry date.</p>
+          </a>
+
+          <a class="card" href="url-encoder.html" data-category="web" data-keywords="url encode decode percent uri query string escape">
+            <span class="card-icon">%</span>
+            <h3>URL Encoder and Decoder</h3>
+            <p>Encode and decode URLs and query strings safely.</p>
+          </a>
+
+          <a class="card" href="timestamp-converter.html" data-category="data" data-keywords="unix timestamp epoch time date convert seconds milliseconds">
+            <span class="card-icon">TS</span>
+            <h3>Unix Timestamp Converter</h3>
+            <p>Convert epoch time to a readable date and back.</p>
           </a>
 
           <a class="card" href="password-generator.html" data-category="security" data-keywords="password random generator secure strong">

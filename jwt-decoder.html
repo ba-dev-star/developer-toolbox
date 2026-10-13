@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online JWT decoder. Read the header, payload and expiry of a JSON Web Token instantly. Your token never leaves your browser.">
+  <title>JWT Decoder - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>JWT Decoder</h1>
+    <p class="tool-intro">Paste a JSON Web Token to read its header, payload and expiry. Decoding happens in your browser, and your token is never sent anywhere.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="field">
+      <label for="jwt-input">Token</label>
+      <textarea id="jwt-input" class="short" dir="ltr" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." spellcheck="false"></textarea>
+    </div>
+
+    <div id="result" hidden>
+
+      <h2 class="section-title">Status</h2>
+      <div id="expiry"></div>
+
+      <div class="tool-grid">
+        <div>
+          <h2 class="section-title">Header</h2>
+          <pre class="code-box" id="jwt-header" dir="ltr"></pre>
+          <div class="toolbar"><button class="btn btn-secondary btn-small" data-copy="jwt-header">Copy header</button></div>
+        </div>
+        <div>
+          <h2 class="section-title">Payload</h2>
+          <pre class="code-box" id="jwt-payload" dir="ltr"></pre>
+          <div class="toolbar"><button class="btn btn-secondary btn-small" data-copy="jwt-payload">Copy payload</button></div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Claims</h2>
+      <div class="result-list" id="claims"></div>
+
+      <h2 class="section-title">Signature</h2>
+      <pre class="code-box" id="jwt-signature" dir="ltr"></pre>
+
+      <div class="note">This tool only decodes the token. It does <strong>not</strong> verify the signature, so never trust a token just because it decodes. Verify signatures on your server.</div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="jwt-decoder.js"></script>
+
+</body>
+</html>
