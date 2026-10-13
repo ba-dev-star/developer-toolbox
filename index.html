@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Free online tools for developers: JSON formatter, password generator, color converter, Base64, word counter and UUID generator.">
   <title>Developer Toolbox - Free Tools for Developers</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"> <link rel="icon" href="favicon.svg" type="image/svg+xml"> <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -32,45 +33,62 @@
     <section class="section" id="tools">
       <div class="container">
         <h2>Tools</h2>
+
+        <div class="tools-toolbar">
+          <input type="search" id="tool-search" class="search-input" placeholder="Search tools... (press / to focus)" aria-label="Search tools" autocomplete="off">
+          <span class="tool-count" id="tool-count">6 tools</span>
+        </div>
+
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="data" aria-pressed="false">Data</button>
+          <button class="chip" data-filter="text" aria-pressed="false">Text</button>
+          <button class="chip" data-filter="security" aria-pressed="false">Security</button>
+          <button class="chip" data-filter="web" aria-pressed="false">Web</button>
+        </div>
+
         <div class="tools-grid">
 
-          <a class="card" href="json-formatter.html">
+          <a class="card" href="json-formatter.html" data-category="data" data-keywords="json format beautify minify validate lint pretty print">
             <span class="card-icon">{ }</span>
             <h3>JSON Formatter and Validator</h3>
             <p>Format, beautify and check your JSON for errors.</p>
           </a>
 
-          <a class="card" href="password-generator.html">
+          <a class="card" href="password-generator.html" data-category="security" data-keywords="password random generator secure strong">
             <span class="card-icon">***</span>
             <h3>Password Generator</h3>
             <p>Create strong random passwords with the options you choose.</p>
           </a>
 
-          <a class="card" href="color-converter.html">
+          <a class="card" href="color-converter.html" data-category="web" data-keywords="color hex rgb convert css picker">
             <span class="card-icon">#</span>
             <h3>Color Converter</h3>
             <p>Convert colors between HEX and RGB.</p>
           </a>
 
-          <a class="card" href="base64.html">
+          <a class="card" href="base64.html" data-category="data" data-keywords="base64 encode decode text">
             <span class="card-icon">64</span>
             <h3>Base64 Encoder and Decoder</h3>
             <p>Encode text to Base64 or decode it back.</p>
           </a>
 
-          <a class="card" href="word-counter.html">
+          <a class="card" href="word-counter.html" data-category="text" data-keywords="word count character counter length lines paragraphs">
             <span class="card-icon">Aa</span>
             <h3>Word and Character Counter</h3>
             <p>Count words, characters and lines in any text.</p>
           </a>
 
-          <a class="card" href="uuid-generator.html">
+          <a class="card" href="uuid-generator.html" data-category="data" data-keywords="uuid guid generator unique id random v4">
             <span class="card-icon">ID</span>
             <h3>UUID Generator</h3>
             <p>Generate unique identifiers (UUID v4) in one click.</p>
           </a>
 
         </div>
+
+        <p class="no-results" id="no-results" hidden>No tools found. Try a different word or choose another category.</p>
+
       </div>
     </section>
 
@@ -88,6 +106,8 @@
       <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
     </div>
   </footer>
+
+  <script src="home.js"></script>
 
 </body>
 </html>
