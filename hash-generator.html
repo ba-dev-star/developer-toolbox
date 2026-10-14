@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online hash generator. Create MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes of any text instantly in your browser.">
+  <title>Hash Generator - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Hash Generator</h1>
+    <p class="tool-intro">Create MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes of any text. Everything is calculated in your browser, and your text is never sent anywhere.</p>
+
+    <div class="toolbar">
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+      <label class="option"><input type="checkbox" id="opt-upper"> Capital letters</label>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="field">
+      <label for="hash-input">Your text</label>
+      <textarea id="hash-input" class="short" dir="auto" placeholder="Type or paste text here. The hashes update as you type." spellcheck="false"></textarea>
+    </div>
+
+    <div class="result-list">
+      <div class="result-row"><div class="result-label">MD5</div><div class="result-value" id="out-md5"></div><button class="btn btn-secondary btn-small" data-copy="out-md5">Copy</button></div>
+      <div class="result-row"><div class="result-label">SHA-1</div><div class="result-value" id="out-sha1"></div><button class="btn btn-secondary btn-small" data-copy="out-sha1">Copy</button></div>
+      <div class="result-row"><div class="result-label">SHA-256</div><div class="result-value" id="out-sha256"></div><button class="btn btn-secondary btn-small" data-copy="out-sha256">Copy</button></div>
+      <div class="result-row"><div class="result-label">SHA-384</div><div class="result-value" id="out-sha384"></div><button class="btn btn-secondary btn-small" data-copy="out-sha384">Copy</button></div>
+      <div class="result-row"><div class="result-label">SHA-512</div><div class="result-value" id="out-sha512"></div><button class="btn btn-secondary btn-small" data-copy="out-sha512">Copy</button></div>
+    </div>
+
+    <h2 class="section-title">Compare with a hash</h2>
+    <div class="control">
+      <label for="compare-input">Paste a hash you received to check if it matches your text</label>
+      <input type="text" id="compare-input" class="text-input" dir="ltr" spellcheck="false" autocomplete="off">
+    </div>
+    <div id="compare-result"></div>
+
+    <div class="note">MD5 and SHA-1 are broken for security and should only be used for checksums. Use SHA-256 or stronger for security. Do not store passwords with a plain hash. Use a password hashing function like bcrypt or Argon2 on your server.</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="hash-generator.js"></script>
+
+</body>
+</html>

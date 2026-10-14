@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free online tools for developers: JSON formatter, JWT decoder, regex tester, diff checker, URL encoder, timestamp converter, Base64, password and UUID generators and more.">
+  <meta name="description" content="Free online tools for developers: JSON formatter, JWT decoder, regex tester, hash generator, diff checker, URL encoder, Base64, timestamp converter and more.">
   <title>Developer Toolbox - Free Tools for Developers</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -36,7 +36,7 @@
 
         <div class="tools-toolbar">
           <input type="search" id="tool-search" class="search-input" placeholder="Search tools... (press / to focus)" aria-label="Search tools" autocomplete="off">
-          <span class="tool-count" id="tool-count">12 tools</span>
+          <span class="tool-count" id="tool-count">15 tools</span>
         </div>
 
         <div class="chips" role="group" aria-label="Filter by category">
@@ -61,16 +61,34 @@
             <p>Read a token's header, payload and expiry date.</p>
           </a>
 
+          <a class="card" href="hash-generator.html" data-category="security" data-keywords="hash md5 sha1 sha256 sha512 checksum digest compare">
+            <span class="card-icon">SHA</span>
+            <h3>Hash Generator</h3>
+            <p>Create MD5 and SHA hashes and compare them.</p>
+          </a>
+
           <a class="card" href="url-encoder.html" data-category="web" data-keywords="url encode decode percent uri query string escape">
             <span class="card-icon">%</span>
             <h3>URL Encoder and Decoder</h3>
             <p>Encode and decode URLs and query strings safely.</p>
           </a>
 
+          <a class="card" href="html-entities.html" data-category="web" data-keywords="html entities encode decode escape special characters amp lt gt unicode">
+            <span class="card-icon">&amp;;</span>
+            <h3>HTML Entities Encoder and Decoder</h3>
+            <p>Convert special characters to HTML entities and back.</p>
+          </a>
+
           <a class="card" href="timestamp-converter.html" data-category="data" data-keywords="unix timestamp epoch time date convert seconds milliseconds">
             <span class="card-icon">TS</span>
             <h3>Unix Timestamp Converter</h3>
             <p>Convert epoch time to a readable date and back.</p>
+          </a>
+
+          <a class="card" href="number-base.html" data-category="data" data-keywords="number base convert binary octal decimal hex hexadecimal bits bigint">
+            <span class="card-icon">0x</span>
+            <h3>Number Base Converter</h3>
+            <p>Convert between binary, octal, decimal and hex.</p>
           </a>
 
           <a class="card" href="regex-tester.html" data-category="text" data-keywords="regex regular expression test match pattern replace capture groups">

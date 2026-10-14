@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online number base converter. Convert between binary, octal, decimal and hexadecimal, with support for very large numbers.">
+  <title>Number Base Converter - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Number Base Converter</h1>
+    <p class="tool-intro">Convert numbers between binary, octal, decimal and hexadecimal. Very large numbers work too. Prefixes like <code>0x</code>, <code>0b</code> and <code>0o</code> are understood.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="panel wide">
+      <div class="toolbar">
+        <input type="text" id="number-input" class="text-input" dir="ltr" placeholder="255, 0xFF, 0b1111 or -42" aria-label="Number" spellcheck="false" autocomplete="off">
+        <select id="from-base" aria-label="Number base of the input">
+          <option value="auto">Auto-detect</option>
+          <option value="2">Binary (2)</option>
+          <option value="8">Octal (8)</option>
+          <option value="10">Decimal (10)</option>
+          <option value="16">Hexadecimal (16)</option>
+          <option value="36">Base 36</option>
+        </select>
+      </div>
+
+      <div class="result-list">
+        <div class="result-row"><div class="result-label">Binary</div><div class="result-value" id="out-binary"></div><button class="btn btn-secondary btn-small" data-copy="out-binary">Copy</button></div>
+        <div class="result-row"><div class="result-label">Binary (grouped)</div><div class="result-value" id="out-grouped"></div><button class="btn btn-secondary btn-small" data-copy="out-grouped">Copy</button></div>
+        <div class="result-row"><div class="result-label">Octal</div><div class="result-value" id="out-octal"></div><button class="btn btn-secondary btn-small" data-copy="out-octal">Copy</button></div>
+        <div class="result-row"><div class="result-label">Decimal</div><div class="result-value" id="out-decimal"></div><button class="btn btn-secondary btn-small" data-copy="out-decimal">Copy</button></div>
+        <div class="result-row"><div class="result-label">Hexadecimal</div><div class="result-value" id="out-hex"></div><button class="btn btn-secondary btn-small" data-copy="out-hex">Copy</button></div>
+        <div class="result-row"><div class="result-label">Base 36</div><div class="result-value" id="out-base36"></div><button class="btn btn-secondary btn-small" data-copy="out-base36">Copy</button></div>
+        <div class="result-row"><div class="result-label">Bits needed</div><div class="result-value" id="out-bits"></div></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="number-base.js"></script>
+
+</body>
+</html>

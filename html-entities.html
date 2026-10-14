@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online HTML entities encoder and decoder. Convert special characters to HTML entities like &amp;amp; and &amp;lt; and back.">
+  <title>HTML Entities Encoder and Decoder - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>HTML Entities Encoder and Decoder</h1>
+    <p class="tool-intro">Convert special characters to HTML entities so they display safely in a web page, or turn entities like <code>&amp;lt;</code> back into normal text.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-encode">Encode</button>
+      <button class="btn" id="btn-decode">Decode</button>
+      <button class="btn btn-secondary" id="btn-swap">Swap</button>
+      <button class="btn btn-secondary" id="btn-copy">Copy result</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="toolbar">
+      <label for="mode">Encode mode:</label>
+      <select id="mode">
+        <option value="basic">Basic: only &amp; &lt; &gt; " '</option>
+        <option value="numbers">Also non-English characters as numbers (&amp;#233;)</option>
+        <option value="names">Also non-English characters as names when possible (&amp;eacute;)</option>
+      </select>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="tool-grid">
+      <div class="field">
+        <label for="entity-input">Input</label>
+        <textarea id="entity-input" dir="auto" placeholder="Type or paste text or HTML here" spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        <label for="entity-output">Result</label>
+        <textarea id="entity-output" dir="auto" readonly spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-title">Common entities</h2>
+    <div class="ref-grid">
+      <div class="ref-item"><code>&amp;amp;</code> &amp;</div>
+      <div class="ref-item"><code>&amp;lt;</code> &lt;</div>
+      <div class="ref-item"><code>&amp;gt;</code> &gt;</div>
+      <div class="ref-item"><code>&amp;quot;</code> "</div>
+      <div class="ref-item"><code>&amp;#39;</code> '</div>
+      <div class="ref-item"><code>&amp;nbsp;</code> non-breaking space</div>
+      <div class="ref-item"><code>&amp;copy;</code> &copy;</div>
+      <div class="ref-item"><code>&amp;euro;</code> &euro;</div>
+      <div class="ref-item"><code>&amp;mdash;</code> &mdash;</div>
+      <div class="ref-item"><code>&amp;hellip;</code> &hellip;</div>
+    </div>
+
+    <div class="note">Decoding understands all numeric entities (like <code>&amp;#233;</code> and <code>&amp;#xE9;</code>) and the most common named ones. Rare named entities are left unchanged. Entities must end with a semicolon.</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="html-entities.js"></script>
+
+</body>
+</html>
