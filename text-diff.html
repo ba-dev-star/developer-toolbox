@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online text diff checker. Compare two texts or code snippets and see added and removed lines side by side.">
+  <title>Text Diff Checker - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Text Diff Checker</h1>
+    <p class="tool-intro">Paste two versions of a text or code and see exactly which lines were added or removed. Nothing leaves your browser.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-compare">Compare</button>
+      <button class="btn btn-secondary" id="btn-swap">Swap</button>
+      <button class="btn btn-secondary" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="toolbar">
+      <label class="option"><input type="checkbox" id="opt-ignore-case"> Ignore case</label>
+      <label class="option"><input type="checkbox" id="opt-ignore-space"> Ignore whitespace</label>
+      <label class="option"><input type="checkbox" id="opt-only-changes"> Show only changes</label>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="tool-grid">
+      <div class="field">
+        <label for="diff-original">Original</label>
+        <textarea id="diff-original" dir="auto" placeholder="Paste the original text here" spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        <label for="diff-changed">Changed</label>
+        <textarea id="diff-changed" dir="auto" placeholder="Paste the changed text here" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <h2 class="section-title">Differences</h2>
+    <div id="diff-summary"></div>
+    <div class="diff-scroll"><div class="diff-box" id="diff-output"></div></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="text-diff.js"></script>
+
+</body>
+</html>

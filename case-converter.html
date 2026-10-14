@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online case converter. Convert text to camelCase, snake_case, kebab-case, PascalCase, UPPER CASE, Title Case and more.">
+  <title>Case Converter - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Case Converter</h1>
+    <p class="tool-intro">Type or paste text and see it in every common case instantly: camelCase, snake_case, kebab-case and more. Each line is converted on its own.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="field">
+      <label for="case-input">Your text</label>
+      <textarea id="case-input" class="short" dir="auto" placeholder="Type or paste text here, like: user profile page" spellcheck="false"></textarea>
+    </div>
+
+    <div class="result-list">
+      <div class="result-row"><div class="result-label">UPPER CASE</div><div class="result-value" id="out-upper" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-upper">Copy</button></div>
+      <div class="result-row"><div class="result-label">lower case</div><div class="result-value" id="out-lower" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-lower">Copy</button></div>
+      <div class="result-row"><div class="result-label">Title Case</div><div class="result-value" id="out-title" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-title">Copy</button></div>
+      <div class="result-row"><div class="result-label">Sentence case</div><div class="result-value" id="out-sentence" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-sentence">Copy</button></div>
+      <div class="result-row"><div class="result-label">camelCase</div><div class="result-value" id="out-camel" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-camel">Copy</button></div>
+      <div class="result-row"><div class="result-label">PascalCase</div><div class="result-value" id="out-pascal" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-pascal">Copy</button></div>
+      <div class="result-row"><div class="result-label">snake_case</div><div class="result-value" id="out-snake" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-snake">Copy</button></div>
+      <div class="result-row"><div class="result-label">CONSTANT_CASE</div><div class="result-value" id="out-constant" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-constant">Copy</button></div>
+      <div class="result-row"><div class="result-label">kebab-case</div><div class="result-value" id="out-kebab" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-kebab">Copy</button></div>
+      <div class="result-row"><div class="result-label">dot.case</div><div class="result-value" id="out-dot" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-dot">Copy</button></div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="case-converter.js"></script>
+
+</body>
+</html>

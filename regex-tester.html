@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online regex tester. Test regular expressions with live match highlighting, capture groups, named groups and replace preview.">
+  <title>Regex Tester - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Regex Tester</h1>
+    <p class="tool-intro">Write a regular expression and see the matches highlighted live. It uses the JavaScript regex engine, and everything runs in your browser.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="panel wide">
+
+      <div class="control">
+        <label for="pattern">Pattern</label>
+        <div class="pattern-row">
+          <span class="slash">/</span>
+          <input type="text" id="pattern" class="text-input" dir="ltr" placeholder="(\d+)-(\w+)" spellcheck="false" autocomplete="off">
+          <span class="slash">/</span>
+          <span class="slash" id="flags-display">g</span>
+        </div>
+      </div>
+
+      <div class="flags">
+        <label class="option"><input type="checkbox" id="flag-g" checked> g: global</label>
+        <label class="option"><input type="checkbox" id="flag-i"> i: ignore case</label>
+        <label class="option"><input type="checkbox" id="flag-m"> m: multiline</label>
+        <label class="option"><input type="checkbox" id="flag-s"> s: dot matches newline</label>
+        <label class="option"><input type="checkbox" id="flag-u"> u: unicode</label>
+      </div>
+
+      <div class="field">
+        <label for="test-input">Test string</label>
+        <textarea id="test-input" class="short" dir="auto" placeholder="Type or paste the text to test here" spellcheck="false"></textarea>
+      </div>
+
+      <div class="control">
+        <label for="replacement">Replace with (optional, supports $1 and $&lt;name&gt;)</label>
+        <input type="text" id="replacement" class="text-input" dir="auto" spellcheck="false" autocomplete="off">
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Result</h2>
+    <div id="match-summary"></div>
+
+    <h2 class="section-title">Highlighted text</h2>
+    <div class="code-box" id="highlight" dir="auto"></div>
+
+    <h2 class="section-title">Matches</h2>
+    <div class="result-list" id="matches"></div>
+
+    <div id="replace-section" hidden>
+      <h2 class="section-title">Replace result</h2>
+      <div class="code-box" id="replace-output" dir="auto"></div>
+      <div class="toolbar"><button class="btn btn-secondary btn-small" data-copy="replace-output">Copy result</button></div>
+    </div>
+
+    <h2 class="section-title">Quick reference</h2>
+    <div class="ref-grid">
+      <div class="ref-item"><code>\d</code> a digit</div>
+      <div class="ref-item"><code>\w</code> a letter, digit or _</div>
+      <div class="ref-item"><code>\s</code> a space or tab</div>
+      <div class="ref-item"><code>.</code> any character</div>
+      <div class="ref-item"><code>^</code> <code>$</code> start and end</div>
+      <div class="ref-item"><code>+</code> <code>*</code> <code>?</code> repeat</div>
+      <div class="ref-item"><code>{2,4}</code> 2 to 4 times</div>
+      <div class="ref-item"><code>[abc]</code> one of a, b, c</div>
+      <div class="ref-item"><code>(...)</code> capture group</div>
+      <div class="ref-item"><code>(?&lt;name&gt;...)</code> named group</div>
+      <div class="ref-item"><code>a|b</code> a or b</div>
+      <div class="ref-item"><code>\b</code> word boundary</div>
+    </div>
+
+    <div class="note">Some very complex patterns can make the browser slow down or freeze. If that happens, simplify the pattern or close the tab.</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="regex-tester.js"></script>
+
+</body>
+</html>
