@@ -265,3 +265,76 @@ a.card {
   text-align: center;
   color: var(--muted);
 }
+/* ===== Footer links, text pages and 404 ===== */
+.footer-links {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  margin-inline: 8px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.prose {
+  max-width: 760px;
+  padding-block: 50px 30px;
+}
+
+.prose h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.2;
+}
+
+.prose h2 {
+  margin: 34px 0 10px;
+  font-size: 1.35rem;
+}
+
+.prose ul {
+  padding-inline-start: 1.4em;
+}
+
+.prose li {
+  margin-bottom: 8px;
+}
+
+.prose a {
+  color: var(--primary);
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.not-found {
+  padding-block: 90px 50px;
+  text-align: center;
+}
+
+.not-found .big {
+  font-size: clamp(4rem, 14vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.not-found h1 {
+  margin: 10px 0 8px;
+}
+
+.not-found .popular {
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.not-found .popular a {
+  color: var(--primary);
+}
