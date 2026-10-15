@@ -54,7 +54,40 @@
       </div>
     </div>
 
-  </main>
+      <section class="info">
+      <h2>How to use the JSON Formatter</h2>
+      <ol>
+        <li>Paste your JSON into the <strong>Input</strong> box, or press <strong>Load example</strong>.</li>
+        <li>Press <strong>Format</strong> to make it easy to read, or <strong>Minify</strong> to remove all extra spaces.</li>
+        <li>Choose the indent you prefer: 2 spaces, 4 spaces or a tab.</li>
+        <li>Press <strong>Validate</strong> if you only want to check the JSON. When something is wrong, the message tells you where.</li>
+        <li>Press <strong>Copy result</strong> to copy the output.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>JSON (JavaScript Object Notation) is the most common format for sending data between apps and servers. This tool formats, minifies and validates JSON in your browser, so your data is never uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Why does my JSON show an error?</summary>
+        <p>The tool follows the strict JSON standard. The most common mistakes are a comma after the last item, keys without double quotes, single quotes instead of double quotes, and comments. None of these are allowed in JSON.</p>
+      </details>
+      <details>
+        <summary>Does formatting change my data?</summary>
+        <p>The values stay the same, with two small effects of the way JavaScript reads JSON. Whole numbers larger than 9,007,199,254,740,991 can lose precision, and keys that are whole numbers (like "1" or "2") move to the top of their object. If a key appears twice, only the last one is kept.</p>
+      </details>
+      <details>
+        <summary>What is the difference between Format and Minify?</summary>
+        <p>Format adds line breaks and indentation so the JSON is easy to read. Minify removes them to make the JSON as small as possible, which is useful when sending it over a network.</p>
+      </details>
+      <details>
+        <summary>Is my JSON uploaded anywhere?</summary>
+        <p>No. Everything runs in your browser, on your device.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="jwt-decoder.html">JWT Decoder</a>, <a href="base64.html">Base64 Encoder and Decoder</a>, <a href="text-diff.html">Text Diff Checker</a></p>
+    </section></main>
 
   <footer class="site-footer">
     <div class="container">

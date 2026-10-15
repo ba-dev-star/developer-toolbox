@@ -46,7 +46,43 @@
       </div>
     </div>
 
-  </main>
+      <section class="info">
+      <h2>How to use the Base64 Encoder and Decoder</h2>
+      <ol>
+        <li>Type or paste your text into the <strong>Input</strong> box.</li>
+        <li>Press <strong>Encode</strong> to turn text into Base64, or <strong>Decode</strong> to turn Base64 back into text.</li>
+        <li>Press <strong>Swap</strong> to move the result into the input box, so you can convert it again.</li>
+        <li>Press <strong>Copy result</strong> to copy the output.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>Base64 is a way to write data using only letters, numbers and a few symbols. It is often used to put data inside JSON, URLs, emails and tokens. This tool works with any language, including Arabic, and runs in your browser.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Is Base64 a form of encryption?</summary>
+        <p>No. Anyone can decode Base64, so it does not protect anything. Use it to transport data, never to hide secrets.</p>
+      </details>
+      <details>
+        <summary>Does it work with Arabic and emoji?</summary>
+        <p>Yes. Text is converted as UTF-8, so Arabic letters and emoji encode and decode correctly.</p>
+      </details>
+      <details>
+        <summary>Which Base64 formats can it decode?</summary>
+        <p>Standard Base64 and the URL-safe version that uses - and _ are both accepted. Missing = signs at the end are also fine.</p>
+      </details>
+      <details>
+        <summary>Why does decoding fail?</summary>
+        <p>Usually the text has characters that are not part of Base64, or it is incomplete. The result can also fail when the Base64 holds a file or an image instead of text, because this tool decodes text only.</p>
+      </details>
+      <details>
+        <summary>Can I convert files or images?</summary>
+        <p>Not yet. This tool converts text only.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="url-encoder.html">URL Encoder and Decoder</a>, <a href="jwt-decoder.html">JWT Decoder</a>, <a href="hash-generator.html">Hash Generator</a></p>
+    </section></main>
 
   <footer class="site-footer">
     <div class="container">

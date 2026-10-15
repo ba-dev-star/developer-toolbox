@@ -722,3 +722,52 @@ mark.match {
 .markdown-body th {
   background: var(--bg);
 }
+/* ===== How to use and FAQ sections ===== */
+.info {
+  max-width: 820px;
+  margin-top: 56px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.info h2 {
+  margin: 30px 0 12px;
+  font-size: 1.35rem;
+}
+
+.info ol {
+  padding-inline-start: 1.4em;
+}
+
+.info li {
+  margin-bottom: 8px;
+}
+
+.info p {
+  color: var(--muted);
+}
+
+.info a {
+  color: var(--primary);
+}
+
+.info details {
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.info summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info details[open] summary {
+  margin-bottom: 8px;
+}
+
+.info details p {
+  margin: 0;
+}
