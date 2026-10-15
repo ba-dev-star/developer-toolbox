@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online Markdown previewer. Write Markdown and see the formatted result and the HTML code instantly in your browser.">
+  <title>Markdown Previewer - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>Markdown Previewer</h1>
+    <p class="tool-intro">Write Markdown on one side and see the formatted result on the other. You can also copy the HTML code. Everything runs in your browser.</p>
+
+    <div class="toolbar">
+      <button class="btn" id="btn-example">Load example</button>
+      <button class="btn btn-secondary" id="btn-clear">Clear</button>
+      <label class="option"><input type="checkbox" id="opt-show-html"> Show HTML code</label>
+    </div>
+
+    <div class="status" id="status"></div>
+
+    <div class="tool-grid">
+      <div class="field">
+        <label for="md-input">Markdown</label>
+        <textarea id="md-input" dir="auto" placeholder="# Write your Markdown here" spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        <label>Preview</label>
+        <div class="preview-box markdown-body" id="md-preview" dir="auto"></div>
+      </div>
+    </div>
+
+    <div id="html-section" hidden>
+      <h2 class="section-title">HTML code</h2>
+      <div class="code-box" id="md-html" dir="ltr"></div>
+      <div class="toolbar"><button class="btn btn-secondary btn-small" data-copy="md-html">Copy HTML</button></div>
+    </div>
+
+    <div class="note">Supported: headings, bold, italic, strikethrough, inline code, code blocks, links, images, quotes, lists (with nesting and task lists), tables and horizontal lines. Raw HTML you type is shown as plain text for safety. Links and images only accept safe addresses.</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="markdown-previewer.js"></script>
+
+</body>
+</html>

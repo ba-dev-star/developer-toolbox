@@ -2,66 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/json-formatter.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/jwt-decoder.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/hash-generator.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/url-encoder.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/html-entities.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://ba-dev-star.github.io/developer-toolbox/gradient-generator.html</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://ba-dev-star.github.io/developer-toolbox/box-shadow-generator.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/timestamp-converter.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/number-base.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://ba-dev-star.github.io/developer-toolbox/markdown-previewer.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/regex-tester.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/text-diff.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/case-converter.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/password-generator.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/color-converter.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/base64.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/word-counter.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://ba-dev-star.github.io/developer-toolbox/uuid-generator.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
 </urlset>

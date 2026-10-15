@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online CSS gradient generator. Create linear, radial and conic gradients with a live preview and copy the CSS code.">
+  <title>CSS Gradient Generator - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>CSS Gradient Generator</h1>
+    <p class="tool-intro">Design linear, radial and conic gradients with a live preview, then copy the CSS code.</p>
+
+    <div class="status" id="status"></div>
+
+    <div class="preview-large" id="grad-preview"></div>
+
+    <div class="chips" role="group" aria-label="Ready-made gradients">
+      <button class="chip" data-preset="sunset">Sunset</button>
+      <button class="chip" data-preset="ocean">Ocean</button>
+      <button class="chip" data-preset="forest">Forest</button>
+      <button class="chip" data-preset="candy">Candy</button>
+      <button class="chip" data-preset="midnight">Midnight</button>
+      <button class="chip" data-preset="rainbow">Rainbow</button>
+    </div>
+
+    <div class="panel wide">
+
+      <div class="control">
+        <label for="grad-type">Type</label>
+        <select id="grad-type">
+          <option value="linear">Linear</option>
+          <option value="radial">Radial</option>
+          <option value="conic">Conic</option>
+        </select>
+      </div>
+
+      <div class="control" id="angle-control">
+        <label for="grad-angle">Angle: <strong id="grad-angle-value">135&deg;</strong></label>
+        <input type="range" id="grad-angle" min="0" max="360" value="135">
+      </div>
+
+      <div class="control" id="shape-control" hidden>
+        <label for="grad-shape">Shape</label>
+        <select id="grad-shape">
+          <option value="circle">Circle</option>
+          <option value="ellipse">Ellipse</option>
+        </select>
+      </div>
+
+      <div class="control" id="position-control" hidden>
+        <label for="grad-position">Center position</label>
+        <select id="grad-position">
+          <option value="center">Center</option>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+          <option value="top left">Top left</option>
+          <option value="top right">Top right</option>
+          <option value="bottom left">Bottom left</option>
+          <option value="bottom right">Bottom right</option>
+        </select>
+      </div>
+
+      <h2 class="section-title">Colors</h2>
+      <div id="stops"></div>
+
+      <div class="toolbar">
+        <button class="btn btn-secondary" id="btn-add-stop">Add color</button>
+        <button class="btn btn-secondary" id="btn-reverse">Reverse</button>
+        <button class="btn btn-secondary" id="btn-random">Random</button>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">CSS code</h2>
+    <div class="code-box" id="grad-output" dir="ltr"></div>
+    <div class="toolbar"><button class="btn" data-copy="grad-output">Copy CSS</button></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="gradient-generator.js"></script>
+
+</body>
+</html>

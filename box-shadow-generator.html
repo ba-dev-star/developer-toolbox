@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online CSS box shadow generator. Build soft, layered and inset shadows with a live preview and copy the CSS code.">
+  <title>CSS Box Shadow Generator - Developer Toolbox</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Developer Toolbox</a>
+      <nav class="nav">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tool-page">
+
+    <h1>CSS Box Shadow Generator</h1>
+    <p class="tool-intro">Build soft, layered or inset shadows with a live preview, then copy the CSS code.</p>
+
+    <div class="status" id="status"></div>
+
+    <div class="shadow-stage" id="shadow-stage">
+      <div class="shadow-box" id="shadow-box"></div>
+    </div>
+
+    <div class="chips" role="group" aria-label="Ready-made shadows">
+      <button class="chip" data-preset="subtle">Subtle</button>
+      <button class="chip" data-preset="soft">Soft</button>
+      <button class="chip" data-preset="large">Large</button>
+      <button class="chip" data-preset="inset">Inset</button>
+      <button class="chip" data-preset="neumorphic">Neumorphic</button>
+    </div>
+
+    <div class="panel wide">
+
+      <h2>Layers</h2>
+      <div class="chips" id="layer-tabs"></div>
+      <div class="toolbar">
+        <button class="btn btn-secondary btn-small" id="btn-add-layer">Add layer</button>
+        <button class="btn btn-secondary btn-small" id="btn-remove-layer">Remove this layer</button>
+      </div>
+
+      <div class="slider-grid">
+        <div class="control">
+          <label for="sh-x">Horizontal offset: <strong id="sh-x-value">0px</strong></label>
+          <input type="range" id="sh-x" min="-100" max="100" value="0">
+        </div>
+        <div class="control">
+          <label for="sh-y">Vertical offset: <strong id="sh-y-value">10px</strong></label>
+          <input type="range" id="sh-y" min="-100" max="100" value="10">
+        </div>
+        <div class="control">
+          <label for="sh-blur">Blur: <strong id="sh-blur-value">25px</strong></label>
+          <input type="range" id="sh-blur" min="0" max="100" value="25">
+        </div>
+        <div class="control">
+          <label for="sh-spread">Spread: <strong id="sh-spread-value">-5px</strong></label>
+          <input type="range" id="sh-spread" min="-50" max="50" value="-5">
+        </div>
+        <div class="control">
+          <label for="sh-opacity">Opacity: <strong id="sh-opacity-value">25%</strong></label>
+          <input type="range" id="sh-opacity" min="0" max="100" value="25">
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <label for="sh-color">Shadow color:</label>
+        <input type="color" id="sh-color" value="#000000">
+        <label class="option"><input type="checkbox" id="sh-inset"> Inset (inside the box)</label>
+      </div>
+
+      <h2 class="section-title">Preview settings</h2>
+      <div class="toolbar">
+        <label for="pv-bg">Background:</label>
+        <input type="color" id="pv-bg" value="#f1f5f9">
+        <label for="pv-box">Box:</label>
+        <input type="color" id="pv-box" value="#ffffff">
+      </div>
+      <div class="control">
+        <label for="pv-radius">Box corners: <strong id="pv-radius-value">12px</strong></label>
+        <input type="range" id="pv-radius" min="0" max="80" value="12">
+      </div>
+
+    </div>
+
+    <h2 class="section-title">CSS code</h2>
+    <div class="code-box" id="shadow-output" dir="ltr"></div>
+    <div class="toolbar"><button class="btn" data-copy="shadow-output">Copy CSS</button></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Developer Toolbox. Free for everyone.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="box-shadow-generator.js"></script>
+
+</body>
+</html>
