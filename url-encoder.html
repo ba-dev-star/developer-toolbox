@@ -55,7 +55,44 @@
         <textarea id="url-output" dir="auto" readonly spellcheck="false"></textarea>
       </div>
     </div>
+    <section class="info">
+      <h2>How to use the URL Encoder and Decoder</h2>
+      <ol>
+        <li>Type or paste your text or URL into the <strong>Input</strong> box.</li>
+        <li>Choose the mode: <strong>Component</strong> for a single value, or <strong>Full URL</strong> for a whole address.</li>
+        <li>Press <strong>Encode</strong> to make the text safe for a URL, or <strong>Decode</strong> to turn it back into normal text.</li>
+        <li>If you are decoding a query string from a web form, tick <strong>Treat + as space when decoding</strong>.</li>
+        <li>Press <strong>Copy result</strong> to copy the output, or <strong>Swap</strong> to use it as the new input.</li>
+      </ol>
 
+      <h2>About this tool</h2>
+      <p>A URL can only contain a limited set of characters. Spaces, Arabic letters, emoji and symbols like &amp; and = must be written as a percent sign followed by two hex digits, which is called URL encoding or percent encoding. This tool encodes and decodes text in your browser, so nothing is uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>What is the difference between Component and Full URL mode?</summary>
+        <p>Component mode also encodes characters such as / ? &amp; = and :, so use it for one value, like a search word or a query parameter. Full URL mode keeps those characters as they are, so use it for a complete web address.</p>
+      </details>
+      <details>
+        <summary>Why do spaces become %20?</summary>
+        <p>A space is not allowed inside a URL, so it is written as %20. The number 20 is the hex code of the space character.</p>
+      </details>
+      <details>
+        <summary>When should I tick "Treat + as space"?</summary>
+        <p>In data sent by web forms, a + sign often means a space, while %20 always means a space. Tick the option when you decode a query string that comes from a form. Leave it off when a real + sign is part of your data.</p>
+      </details>
+      <details>
+        <summary>Does it work with Arabic?</summary>
+        <p>Yes. Text is converted as UTF-8, so Arabic letters and emoji are encoded and decoded correctly. For example, the Arabic word مرحبا becomes %D9%85%D8%B1%D8%AD%D8%A8%D8%A7.</p>
+      </details>
+      <details>
+        <summary>Why does decoding show an error?</summary>
+        <p>Usually the text contains a % sign that is not followed by two hex digits, such as "100%", or the encoded bytes are not valid text. Fix or remove that part and try again.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="html-entities.html">HTML Entities Encoder and Decoder</a>, <a href="base64.html">Base64 Encoder and Decoder</a>, <a href="regex-tester.html">Regex Tester</a></p>
+    </section>    
   </main>
 
   <footer class="site-footer">

@@ -98,6 +98,44 @@
 
     <div class="note">Some very complex patterns can make the browser slow down or freeze. If that happens, simplify the pattern or close the tab.</div>
 
+        <section class="info">
+      <h2>How to use the Regex Tester</h2>
+      <ol>
+        <li>Type your regular expression in the <strong>Pattern</strong> box, without the slashes. You can press <strong>Load example</strong> to see how it works.</li>
+        <li>Tick the flags you need, such as <strong>g</strong> to find all matches or <strong>i</strong> to ignore case.</li>
+        <li>Type or paste your text in <strong>Test string</strong>. The matches are highlighted as you type.</li>
+        <li>Look at the <strong>Matches</strong> list to see each match, its position, and the content of every group.</li>
+        <li>To test a replacement, type it in <strong>Replace with</strong>. The result appears in <strong>Replace result</strong>.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A regular expression (regex) is a pattern used to find, check or change text. Developers use them to validate emails, extract data from logs, and search and replace text in code. This tester uses the JavaScript regex engine of your browser, and your text never leaves your device.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Which regex flavor does it use?</summary>
+        <p>JavaScript (ECMAScript). Most basics are the same in other languages, but some features and syntax differ. For example, named groups are written (?&lt;name&gt;...) in JavaScript and (?P&lt;name&gt;...) in Python.</p>
+      </details>
+      <details>
+        <summary>What do the flags g, i, m, s and u do?</summary>
+        <p>g finds all matches instead of only the first one. i ignores uppercase and lowercase. m makes ^ and $ match at the start and end of every line. s lets the dot match new lines. u turns on full Unicode support, which you need for patterns like \p{L}.</p>
+      </details>
+      <details>
+        <summary>How do I use groups in the replacement?</summary>
+        <p>Use $1, $2 and so on for numbered groups, $&lt;name&gt; for named groups, and $&amp; for the whole match. For example, replacing (\d+)-(\d+) with $2-$1 swaps the two numbers.</p>
+      </details>
+      <details>
+        <summary>Why do I see only one match?</summary>
+        <p>The g flag is probably off. Without it, a regular expression stops after the first match.</p>
+      </details>
+      <details>
+        <summary>Can a pattern freeze the page?</summary>
+        <p>Yes. Some patterns with nested repeats, like (a+)+, can take a very long time on some text. This is a known problem called catastrophic backtracking. If the page freezes, simplify the pattern or close the tab. The tool also shows at most 1000 matches.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="text-diff.html">Text Diff Checker</a>, <a href="case-converter.html">Case Converter</a>, <a href="word-counter.html">Word and Character Counter</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

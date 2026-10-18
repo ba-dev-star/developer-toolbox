@@ -51,6 +51,43 @@
       <div class="result-row"><div class="result-label">dot.case</div><div class="result-value" id="out-dot" dir="auto"></div><button class="btn btn-secondary btn-small" data-copy="out-dot">Copy</button></div>
     </div>
 
+        <section class="info">
+      <h2>How to use the Case Converter</h2>
+      <ol>
+        <li>Type or paste your text into the box, or press <strong>Load example</strong>.</li>
+        <li>All the conversions appear below, and they update as you type.</li>
+        <li>Press <strong>Copy</strong> next to the one you want.</li>
+        <li>If your text has several lines, each line is converted on its own.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>Different programming languages and file formats use different ways of writing names with several words. This tool converts text to UPPER CASE, lower case, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case. It runs in your browser, and your text is not uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>What is the difference between camelCase and PascalCase?</summary>
+        <p>Both join the words with no spaces and capitalize each word. In camelCase the first word starts with a small letter, like userName. In PascalCase every word starts with a capital letter, like UserName.</p>
+      </details>
+      <details>
+        <summary>When do I use snake_case, kebab-case or CONSTANT_CASE?</summary>
+        <p>The choice depends on the language or style guide you follow. Commonly, snake_case is used for variables in Python and for database columns, kebab-case for URLs, CSS classes and file names, and CONSTANT_CASE for constants and environment variables.</p>
+      </details>
+      <details>
+        <summary>How does the tool find the words in my text?</summary>
+        <p>It splits the text at spaces and symbols, and also where a small letter is followed by a capital letter, so getUserName becomes get, User and Name. A group of capitals is kept together when a new word follows, so XMLHttpRequest becomes XML, Http and Request. Digits stay with the word before them, so sha256 stays one word.</p>
+      </details>
+      <details>
+        <summary>Does Title Case follow a style guide?</summary>
+        <p>No. It makes the first letter of every word a capital, including small words such as the and of. Sentence case makes the first letter of each line, and each sentence after . ! or ? a capital, and the rest small.</p>
+      </details>
+      <details>
+        <summary>Does it work with Arabic?</summary>
+        <p>Arabic has no capital letters, so UPPER CASE and lower case leave Arabic text unchanged. Name styles such as snake_case keep the Arabic words and join them in the chosen style.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="word-counter.html">Word and Character Counter</a>, <a href="text-diff.html">Text Diff Checker</a>, <a href="regex-tester.html">Regex Tester</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

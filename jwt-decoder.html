@@ -66,6 +66,43 @@
 
     </div>
 
+        <section class="info">
+      <h2>How to use the JWT Decoder</h2>
+      <ol>
+        <li>Paste your token into the <strong>Token</strong> box, or press <strong>Load example</strong>. The result appears as you type.</li>
+        <li>Read the <strong>Status</strong> badge. It tells you if the token is expired, still valid, or not valid yet.</li>
+        <li>Look at the <strong>Header</strong> and the <strong>Payload</strong>, and at the <strong>Claims</strong> list, where times like exp and iat are shown as readable dates.</li>
+        <li>Press <strong>Copy header</strong> or <strong>Copy payload</strong> to copy the JSON.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A JWT (JSON Web Token) is a compact token that apps use to prove who a user is. It has three parts separated by dots: the header, the payload and the signature. The header and the payload are JSON text written in Base64URL, so anyone can read them. This tool decodes them in your browser and does not send your token anywhere.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Does this tool check the signature?</summary>
+        <p>No. It only decodes the token, so it cannot tell you if the token is genuine. The signature must be verified on your server with the secret or public key. Never trust a token just because it decodes.</p>
+      </details>
+      <details>
+        <summary>Is it safe to paste my token here?</summary>
+        <p>The decoding happens in your browser and nothing is uploaded. Still, a live token can give access to an account, so avoid pasting production tokens into any website you do not fully trust. For testing, use expired or test tokens.</p>
+      </details>
+      <details>
+        <summary>What do exp, iat and nbf mean?</summary>
+        <p>exp is the time the token expires, iat is the time it was issued, and nbf is the time before which it is not valid. They are Unix timestamps in seconds, and the tool shows them as readable dates.</p>
+      </details>
+      <details>
+        <summary>Do I need to remove the word Bearer?</summary>
+        <p>No. If you paste the whole Authorization header value, the word Bearer at the start is removed automatically.</p>
+      </details>
+      <details>
+        <summary>Why does it say a JWT has 3 parts?</summary>
+        <p>A signed JWT always has the form header.payload.signature, with two dots. This message means the text is missing a part or was cut when it was copied. Encrypted tokens (JWE) have five parts and are not supported.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="base64.html">Base64 Encoder and Decoder</a>, <a href="timestamp-converter.html">Unix Timestamp Converter</a>, <a href="hash-generator.html">Hash Generator</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

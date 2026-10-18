@@ -56,6 +56,44 @@
     <div id="diff-summary"></div>
     <div class="diff-scroll"><div class="diff-box" id="diff-output"></div></div>
 
+        <section class="info">
+      <h2>How to use the Text Diff Checker</h2>
+      <ol>
+        <li>Paste the first version of your text or code into the <strong>Original</strong> box.</li>
+        <li>Paste the second version into the <strong>Changed</strong> box.</li>
+        <li>Press <strong>Compare</strong>. Removed lines are shown in red with a minus sign, and added lines are shown in green with a plus sign.</li>
+        <li>Use the options to <strong>Ignore case</strong>, <strong>Ignore whitespace</strong>, or <strong>Show only changes</strong>. The result updates when you change an option.</li>
+        <li>Press <strong>Swap</strong> to exchange the two texts, or <strong>Load example</strong> to see a sample.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A diff shows what changed between two versions of a text. Developers use it to review code changes, compare configuration files, and check what was edited in a document. This tool compares the two texts in your browser, so nothing is uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>How does the comparison work?</summary>
+        <p>The tool compares the texts line by line. It finds the largest set of lines that both texts share, in the same order, and shows every other line as removed or added.</p>
+      </details>
+      <details>
+        <summary>Why does a changed line appear twice?</summary>
+        <p>A line that was edited is shown as the old line in red and the new line in green. The tool compares whole lines and does not highlight the changed words inside a line.</p>
+      </details>
+      <details>
+        <summary>What do the options do?</summary>
+        <p>Ignore case treats Hello and hello as the same. Ignore whitespace ignores spaces at the start and end of a line and extra spaces between words. Show only changes hides the unchanged lines and keeps two lines of context around each change.</p>
+      </details>
+      <details>
+        <summary>Do different line endings count as changes?</summary>
+        <p>No. Windows and Mac or Linux line endings are treated the same, and a final empty line is ignored.</p>
+      </details>
+      <details>
+        <summary>Is there a size limit?</summary>
+        <p>Texts that are mostly similar can be very large. Texts that are completely different are limited to about 2000 lines each, and the tool shows a message when a comparison is too large.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="json-formatter.html">JSON Formatter and Validator</a>, <a href="word-counter.html">Word and Character Counter</a>, <a href="markdown-previewer.html">Markdown Previewer</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

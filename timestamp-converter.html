@@ -79,6 +79,43 @@
       </div>
     </div>
 
+        <section class="info">
+      <h2>How to use the Unix Timestamp Converter</h2>
+      <ol>
+        <li>The numbers at the top show the current Unix time, in seconds and in milliseconds. Press <strong>Copy seconds</strong> or <strong>Copy milliseconds</strong> to copy them.</li>
+        <li>To read a timestamp, type it in <strong>Timestamp to date</strong> and press <strong>Convert</strong>. You get the date in UTC, in your local time, and in words such as "2 days ago".</li>
+        <li>To get a timestamp, type a date like <code>2026-10-13 14:30:00</code> in <strong>Date to timestamp</strong>, choose local time or UTC, and press <strong>Convert</strong>.</li>
+        <li>Press <strong>Use now</strong> in either box to fill it with the current time.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A Unix timestamp (also called epoch time) is the number of seconds that have passed since January 1, 1970 at 00:00:00 UTC. Programmers use it to store and compare dates in databases, APIs and log files. This tool converts timestamps to readable dates and back, in your browser.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Is my timestamp in seconds or milliseconds?</summary>
+        <p>Today, a timestamp in seconds has 10 digits and one in milliseconds has 13 digits. In Auto-detect mode, numbers with 12 or more digits are treated as milliseconds. You can also choose the unit yourself.</p>
+      </details>
+      <details>
+        <summary>Which date formats can I type?</summary>
+        <p>Use year-month-day, optionally followed by the time, like 2026-10-13, 2026-10-13 14:30 or 2026-10-13 14:30:00. A T between the date and the time also works. Impossible dates, such as February 31, are rejected.</p>
+      </details>
+      <details>
+        <summary>Why is my local time different from UTC?</summary>
+        <p>UTC is the world reference time. Your local time is UTC plus or minus the offset of your time zone, taken from your device. The timestamp itself is the same everywhere.</p>
+      </details>
+      <details>
+        <summary>Can I convert dates before 1970?</summary>
+        <p>Yes. Dates before January 1, 1970 have negative timestamps, and the tool accepts them.</p>
+      </details>
+      <details>
+        <summary>What is the Year 2038 problem?</summary>
+        <p>Some old systems store seconds in a 32-bit signed number, which cannot go above 2,147,483,647. That moment is January 19, 2038 at 03:14:07 UTC. This tool is not affected by it.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="jwt-decoder.html">JWT Decoder</a>, <a href="number-base.html">Number Base Converter</a>, <a href="json-formatter.html">JSON Formatter and Validator</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">
