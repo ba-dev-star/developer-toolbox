@@ -57,6 +57,47 @@
       </div>
     </div>
 
+        <section class="info">
+      <h2>How to use the Number Base Converter</h2>
+      <ol>
+        <li>Type a number in the box, like <code>255</code>, <code>0xFF</code>, <code>0b1111</code> or <code>-42</code>.</li>
+        <li>Leave the list on <strong>Auto-detect</strong>, or choose the base of your number: binary, octal, decimal, hexadecimal or base 36.</li>
+        <li>The number appears right away in binary, octal, decimal, hexadecimal and base 36, with the number of bits it needs.</li>
+        <li>Press <strong>Copy</strong> next to the result you want.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A number can be written in different bases. Computers work in binary (base 2), programmers often use hexadecimal (base 16) for colors, memory addresses and bytes, and people use decimal (base 10). This tool converts whole numbers between these bases in your browser, and it works with very large numbers without losing precision.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>What do the prefixes 0x, 0b and 0o mean?</summary>
+        <p>They tell the base of a number: 0x is hexadecimal, 0b is binary and 0o is octal. Many programming languages use them. In Auto-detect mode, a number without a prefix is read as decimal.</p>
+      </details>
+      <details>
+        <summary>Why does FF show an error?</summary>
+        <p>In Auto-detect mode, a number with no prefix is decimal, and F is not a decimal digit. Write it as 0xFF, or choose Hexadecimal (16) in the list.</p>
+      </details>
+      <details>
+        <summary>How large can the number be?</summary>
+        <p>Up to 5,000 digits. The tool uses exact big-number arithmetic, so it does not lose precision like ordinary JavaScript numbers do after 9,007,199,254,740,991.</p>
+      </details>
+      <details>
+        <summary>Does it support negative numbers and decimals?</summary>
+        <p>Negative whole numbers are supported and are shown with a minus sign. This is not the two's complement form used inside computers. Numbers with a fractional part, like 3.14, are not supported.</p>
+      </details>
+      <details>
+        <summary>What does "Bits needed" mean?</summary>
+        <p>It is the number of binary digits needed to write the size of the number, without the sign. For example, 255 needs 8 bits and 256 needs 9 bits.</p>
+      </details>
+      <details>
+        <summary>Can I type spaces, commas or underscores?</summary>
+        <p>Yes. Spaces, commas and underscores are ignored, so 1,000,000 and 1_000_000 both work.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="timestamp-converter.html">Unix Timestamp Converter</a>, <a href="color-converter.html">Color Converter</a>, <a href="hash-generator.html">Hash Generator</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

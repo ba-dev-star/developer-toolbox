@@ -55,6 +55,47 @@
 
     <div class="note">MD5 and SHA-1 are broken for security and should only be used for checksums. Use SHA-256 or stronger for security. Do not store passwords with a plain hash. Use a password hashing function like bcrypt or Argon2 on your server.</div>
 
+        <section class="info">
+      <h2>How to use the Hash Generator</h2>
+      <ol>
+        <li>Type or paste your text into the <strong>Your text</strong> box. The hashes appear as you type.</li>
+        <li>Press <strong>Copy</strong> next to the hash you need: MD5, SHA-1, SHA-256, SHA-384 or SHA-512.</li>
+        <li>Tick <strong>Capital letters</strong> if you want the hash in uppercase.</li>
+        <li>To check a hash you received, paste it in <strong>Compare with a hash</strong>. The tool tells you if it matches your text and which algorithm it belongs to.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>A hash is a short fixed-length fingerprint of some data. The same text always gives the same hash, and even a tiny change gives a completely different one. Developers use hashes to check that data was not changed, to compare files and texts, and to create identifiers. This tool calculates hashes of text in your browser, so your text is never uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Which hash algorithm should I use?</summary>
+        <p>Use SHA-256 or stronger when security matters. MD5 and SHA-1 are broken for security because different inputs with the same hash can be created, so use them only for simple checksums.</p>
+      </details>
+      <details>
+        <summary>Can a hash be reversed or decrypted?</summary>
+        <p>No. A hash is a one-way function, so you cannot recover the original text from it. Attackers only try to guess the text and compare the hashes.</p>
+      </details>
+      <details>
+        <summary>Can I use it to store passwords?</summary>
+        <p>No. Plain hashes like SHA-256 are too fast and are not suitable for passwords. Use a password hashing function such as bcrypt, scrypt or Argon2 with a salt, on your server.</p>
+      </details>
+      <details>
+        <summary>Why does my hash change when I add a space or a new line?</summary>
+        <p>Every character counts, including spaces and line breaks. Even one extra invisible character gives a different hash.</p>
+      </details>
+      <details>
+        <summary>How long is each hash?</summary>
+        <p>MD5 has 32 characters, SHA-1 has 40, SHA-256 has 64, SHA-384 has 96 and SHA-512 has 128. The compare box uses these lengths to tell you which algorithm a hash probably belongs to.</p>
+      </details>
+      <details>
+        <summary>Can it hash files?</summary>
+        <p>Not yet. This tool hashes text only. Also, the SHA hashes need a secure page, so they work on the live website (https).</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="password-generator.html">Password Generator</a>, <a href="base64.html">Base64 Encoder and Decoder</a>, <a href="uuid-generator.html">UUID Generator</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">

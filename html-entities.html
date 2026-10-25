@@ -72,6 +72,47 @@
 
     <div class="note">Decoding understands all numeric entities (like <code>&amp;#233;</code> and <code>&amp;#xE9;</code>) and the most common named ones. Rare named entities are left unchanged. Entities must end with a semicolon.</div>
 
+        <section class="info">
+      <h2>How to use the HTML Entities Encoder and Decoder</h2>
+      <ol>
+        <li>Type or paste your text or HTML into the <strong>Input</strong> box.</li>
+        <li>Choose the <strong>Encode mode</strong>. Basic only changes the five special characters, and the other two modes also change non-English characters.</li>
+        <li>Press <strong>Encode</strong> to turn characters into entities, or <strong>Decode</strong> to turn entities back into characters.</li>
+        <li>Press <strong>Copy result</strong> to copy the output, or <strong>Swap</strong> to use it as the new input.</li>
+      </ol>
+
+      <h2>About this tool</h2>
+      <p>Some characters have a special meaning in HTML. The signs &lt; and &amp; start tags and entities, so to show them as normal text you write them as &amp;lt; and &amp;amp;. These codes are called HTML entities. This tool converts text to entities and back in your browser, so nothing is uploaded.</p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Which characters does Basic mode change?</summary>
+        <p>Five characters: the ampersand &amp;, the signs &lt; and &gt;, the double quote, and the single quote. They become &amp;amp;, &amp;lt;, &amp;gt;, &amp;quot; and &amp;#39;.</p>
+      </details>
+      <details>
+        <summary>What is the difference between numbers and names?</summary>
+        <p>Both show the same character. For example, &amp;eacute; and &amp;#233; both show é. Names are easier to read, and numbers work for every character, including emoji. In the names mode, a number is used when a character has no known name.</p>
+      </details>
+      <details>
+        <summary>Does it decode every named entity?</summary>
+        <p>It decodes all numeric entities, written in decimal like &amp;#233; or in hex like &amp;#xE9;, and 198 of the most common named ones. A rare name is left unchanged.</p>
+      </details>
+      <details>
+        <summary>Why is &amp;amp without a semicolon not decoded?</summary>
+        <p>The tool only decodes entities that end with a semicolon, such as &amp;amp;. Text without the semicolon stays as it is.</p>
+      </details>
+      <details>
+        <summary>What happens when I decode twice?</summary>
+        <p>Each press decodes one level. If your text was encoded twice, for example &amp;amp;lt;, the first press gives &amp;lt; and the second press gives the sign &lt;.</p>
+      </details>
+      <details>
+        <summary>Does encoding make my page safe from attacks?</summary>
+        <p>Encoding user text before you show it in HTML is an important part of preventing cross-site scripting (XSS). But safety also depends on where the text is placed, so use the escaping built into your framework or template engine rather than doing it by hand.</p>
+      </details>
+
+      <h2>Related tools</h2>
+      <p><a href="url-encoder.html">URL Encoder and Decoder</a>, <a href="base64.html">Base64 Encoder and Decoder</a>, <a href="markdown-previewer.html">Markdown Previewer</a></p>
+    </section>
   </main>
 
   <footer class="site-footer">
